@@ -1,0 +1,2 @@
+docker build . -t tnginx:1
+docker run -d -v $(pwd)/site_one:/usr/share/nginx/site_one -v $(pwd)/site_two:/usr/share/nginx/site_two -p 80:80 -p 3000:3000 tnginx:1

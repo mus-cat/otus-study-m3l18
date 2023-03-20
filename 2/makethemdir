@@ -1,0 +1,5 @@
+FROM redmine
+USER redmine
+RUN mkdir /usr/src/redmine/public/themes/bleuclair \
+    && chown redmine.redmine /usr/src/redmine/public/themes/bleuclair \
+    && git clone -b redmine4.2 --single-branch https://github.com/farend/redmine_theme_farend_bleuclair.git /usr/src/redmine/public/themes/bleuclair
